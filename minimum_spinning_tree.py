@@ -7,7 +7,7 @@ from random import randint
 class PrimAlgorithm():
     """
     class PrimAlgoritm
-    create minimum spanning tree
+    create minimum spanning tree path
     """
     def __init__(self):
         self.matrix=[]
@@ -54,7 +54,7 @@ class PrimAlgorithm():
         method - input value of vertices
         """
         while self.vertex not in range(0,10):
-            self.vertex=int(input("Choose value of vertex in range[0,10]: "))
+            self.vertex=int(input("Choose number of vertex in range[0,10]: "))
         return self.vertex
 
     def start_minimum_spanning_tree(self):
@@ -78,7 +78,6 @@ class PrimAlgorithm():
                                 minimum=self.matrix[row][column]
                                 index_of_row_minimum_value=row
                                 index_of_column_minimum_value=column
-            #if value of edges is chosen,we change the value on 0
             self.matrix[index_of_row_minimum_value][index_of_column_minimum_value]=0
             self.matrix[index_of_column_minimum_value][index_of_row_minimum_value]=0
             #added minimum value to weight
